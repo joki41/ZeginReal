@@ -18,6 +18,7 @@ namespace ZeginReal
             driver.Manage().Window.Maximize();
 
             //find kopce ok kukisi i kopce od reklama i klikni
+            // linija za commit
            
         }
         public void NapisiTekstVoPoleto(string tekst)
