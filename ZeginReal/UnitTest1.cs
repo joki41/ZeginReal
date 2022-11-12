@@ -31,7 +31,7 @@ namespace ZeginReal
         [TestMethod]
         public void MedijaKopcinja()
         {
-           
+            homepage.SocialMediaButtons1();
         }
 
 

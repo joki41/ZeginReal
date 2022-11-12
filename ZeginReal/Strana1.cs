@@ -33,10 +33,22 @@ namespace ZeginReal
         }
         public void SocialMediaButtons1()
         {
-             
-            //test za joco
+           
+           
+            
+             //   driver.Navigate().GoToUrl("https://www.zegin.com.mk/");
+            Thread.Sleep(2000);
+            driver.FindElement(By.XPath("//*[@id='popup - buttons']/button[1]")).Click();
+            Thread.Sleep(2000);
+            driver.FindElement(By.XPath("//*[@id='cboxClose']")).Click();
+            Thread.Sleep(2000);
+            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Neutrogena - Ваш избор'])[1]/following::a[2]")).Click();
+                // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_1 | ]]
+            
 
-            // this is just a test or git
+
+
+
 
         }
     }
