@@ -19,6 +19,11 @@ namespace ZeginReal
 
             //find kopce ok kukisi i kopce od reklama i klikni
             // linija za commit
+            Thread.Sleep(3000); // morav da dodam pauza tuka posho mi frlashe error "element is not clickable at point blabla"
+            driver.FindElement(By.XPath("//*[@id=\"popup-buttons\"]/button[1]")).Click();
+            Thread.Sleep(2000);
+            driver.FindElement(By.XPath("//*[@id=\"cboxClose\"]")).Click();
+            Thread.Sleep(1000);
            
         }
         public void NapisiTekstVoPoleto(string tekst)
