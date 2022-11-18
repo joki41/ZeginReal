@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,25 +37,25 @@ namespace ZeginReal
 
             //
         }
-        public void SocialMediaButtons1()
+        public void Kategorii()
         {
-           
-           
-            
-             //   driver.Navigate().GoToUrl("https://www.zegin.com.mk/");
-            Thread.Sleep(2000);
-            driver.FindElement(By.XPath("//*[@id='popup - buttons']/button[1]")).Click();
-            Thread.Sleep(2000);
-            driver.FindElement(By.XPath("//*[@id='cboxClose']")).Click();
-            Thread.Sleep(2000);
-            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Neutrogena - Ваш избор'])[1]/following::a[2]")).Click();
-                // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_1 | ]]
-            
-
+            var element = driver.FindElement(By.CssSelector("#block-main-navigation > ul > li:nth-child(1) > a"));
+            Actions action = new Actions(driver);
+            action.MoveToElement(element).Perform();
+            driver.FindElement(By.LinkText("Историја")).Click();
 
 
 
 
         }
+           
+           
+            
+             
+         
+
+
+
+      
     }
 }

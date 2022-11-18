@@ -29,9 +29,13 @@ namespace ZeginReal
             Assert.AreEqual("https://www.zegin.com.mk/mk/products?product=Sirup", strurl);
         }
         [TestMethod]
-        public void MedijaKopcinja()
+        public void Kategorii()
         {
-            homepage.SocialMediaButtons1();
+            homepage.Kategorii();
+
+            String strUrl = driver.Url;
+
+            Assert.AreEqual("https://www.zegin.com.mk/mk/istorija", strUrl);
         }
 
 
