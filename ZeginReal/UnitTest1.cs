@@ -38,6 +38,11 @@ namespace ZeginReal
             Assert.AreEqual("https://www.zegin.com.mk/mk/istorija", strUrl);
         }
 
+        [TestMethod]
+        public void Kosnicka()
+        {
+            homepage.Kosnicka();
+        }
 
     }
 }

@@ -48,6 +48,27 @@ namespace ZeginReal
 
 
         }
+
+        public void Kosnicka()
+        {
+            // odberi proizvod/i od kosnickata i proveri dali go pokazuva tocniot broj
+            // isprani ja kosnickata i proveri dali e prazna
+
+            driver.FindElement(By.CssSelector("#edit-submit--22")).Click();
+            Thread.Sleep(2000);
+            driver.FindElement(By.CssSelector("#edit-submit--14")).Click();
+
+            var brojkaOdKosnicka = driver.FindElement(By.CssSelector("#block-cart > div > div > div > a > span.cart-block--summary__count.badge.badge-secondary")).Text;
+            Console.WriteLine(brojkaOdKosnicka);
+            int actualBrojVoKosnicka;
+            var broj = Int32.TryParse(brojkaOdKosnicka, out actualBrojVoKosnicka);
+
+            Assert.AreEqual(2, actualBrojVoKosnicka);
+
+
+
+
+        }
            
            
             
